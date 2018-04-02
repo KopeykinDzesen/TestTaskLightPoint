@@ -90,30 +90,15 @@ namespace TestTask
             return countFloor;
         }
 
-        // пересчитать этажи
-        private void RecountFloor()
-        {
-            
-        }
-
         // перевести дерево в тип string (в одну отсортированую строку)
-        public string BinaryTreeToStr(BinaryTree binaryTree)
+        public string BinaryTreeToStr()
         {
             string result = "";
-            if (binaryTree.left != null)
-                result += BinaryTreeToStr(binaryTree.left);
-            result += binaryTree.value.ToString() + "[" + binaryTree.floor.ToString() + "]" +" ";
-            if (binaryTree.right != null)
-                result += BinaryTreeToStr(binaryTree.right);
-            return result;
-        }
-
-        //перевести дерево в тип string (в многострочном режиме)
-        public string BinaryTreeToMultiStr(BinaryTree binaryTree)
-        {
-            string result = "";
-            string space = "   ";
-
+            if (this.left != null)
+                result += this.left.BinaryTreeToStr();
+            result += this.value.ToString() + "[" + this.floor.ToString() + "]" + " ";
+            if (this.right != null)
+                result += this.right.BinaryTreeToStr();
             return result;
         }
 
@@ -236,27 +221,27 @@ namespace TestTask
             tree.Insert(35);
             tree.Insert(40);
 
-            Console.WriteLine(tree.BinaryTreeToStr(tree));
+            Console.WriteLine(tree.BinaryTreeToStr());
             Console.WriteLine(tree.CountNode());
             Console.WriteLine(tree.CountFloor());
 
             BinaryTree treeSearch = new BinaryTree();
-            treeSearch = tree.Search(8);
+            treeSearch = tree.Search(30);
             if (treeSearch != null)
             {
                 Console.WriteLine(treeSearch.GetValue().ToString());
-                Console.WriteLine(treeSearch.GetFloor().ToString()); 
+                Console.WriteLine(treeSearch.GetFloor().ToString());
             }
             treeSearch = tree.Search(4);
             if (treeSearch != null)
                 Console.WriteLine(treeSearch.GetValue().ToString());
-            treeSearch = tree.Search(6);
+            treeSearch = tree.Search(40);
             if (treeSearch != null)
                 Console.WriteLine(treeSearch.GetValue().ToString());
 
             tree.Remove(20);
 
-            Console.WriteLine(tree.BinaryTreeToStr(tree));
+            Console.WriteLine(tree.BinaryTreeToStr());
             Console.WriteLine(tree.CountNode());
             Console.WriteLine(tree.CountFloor());
 
