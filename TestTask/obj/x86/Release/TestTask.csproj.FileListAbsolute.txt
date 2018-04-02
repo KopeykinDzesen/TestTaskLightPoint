@@ -1,0 +1,3 @@
+/home/dzesen/Projects/TestTask/TestTask/bin/Release/TestTask.exe
+/home/dzesen/Projects/TestTask/TestTask/obj/x86/Release/TestTask.csproj.CoreCompileInputs.cache
+/home/dzesen/Projects/TestTask/TestTask/obj/x86/Release/TestTask.exe

@@ -1,0 +1,5 @@
+/home/dzesen/Projects/TestTask/TestTask/bin/Debug/TestTask.exe
+/home/dzesen/Projects/TestTask/TestTask/bin/Debug/TestTask.pdb
+/home/dzesen/Projects/TestTask/TestTask/obj/x86/Debug/TestTask.csproj.CoreCompileInputs.cache
+/home/dzesen/Projects/TestTask/TestTask/obj/x86/Debug/TestTask.exe
+/home/dzesen/Projects/TestTask/TestTask/obj/x86/Debug/TestTask.pdb
